@@ -2,6 +2,7 @@
 """ comments """
 
 import csv
+import math
 from typing import List
 index_range = __import__('0-simple_helper_function').index_range
 
@@ -55,7 +56,7 @@ class Server:
             page_size (int, optional):Defaults to 10.
         """
         data = self.get_page(page, page_size)
-        total_pages = len(self.dataset()) // page_size
+        total_pages = math.ceil(len(self.dataset()) / page_size)
 
         dictio = {
             "page_size": page_size if page_size <= len(data) else len(data),
