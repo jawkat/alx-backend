@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
-"""_summary_
+""" comments """
 
-    Returns:
-        _type_: _description_
-    
-"""
 import csv
 import math
 from typing import List
