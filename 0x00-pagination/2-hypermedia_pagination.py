@@ -58,7 +58,7 @@ class Server:
         data = self.get_page(page, page_size)
         total_pages = len(self.dataset()) // page_size
 
-        dict = {
+        dictio = {
             "page_size": page_size if page_size <= len(data) else len(data),
             "page": page,
             "data": data,
@@ -66,4 +66,4 @@ class Server:
             "prev_page": page - 1 if page >= 1 else None,
             "total_pages": total_pages
             }
-        return dict
+        return dictio
