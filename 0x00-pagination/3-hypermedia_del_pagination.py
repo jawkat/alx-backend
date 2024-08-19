@@ -40,6 +40,15 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """_summary_
+
+        Args:
+            index (int, optional): _description_. Defaults to None.
+            page_size (int, optional): _description_. Defaults to 10.
+
+        Returns:
+            Dict: _description_
+        """
         assert index in range(len(self.dataset()))
         index_dict = self.indexed_dataset()
         if index == 0 and page_size == 10:
