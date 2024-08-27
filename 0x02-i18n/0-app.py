@@ -1,10 +1,11 @@
 """ comments """
 from flask import Flask, render_template
+from flask.wrappers import Response
 app = Flask(__name__)
 
 
 @app.route("/")
-def hello():
+def hello() -> Response:
     """_summary_
     """
     return render_template('0-index.html')
